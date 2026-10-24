@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HostelHub – Smart Hostel Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ========== LANDING ========== -->
+  <div id="page-landing" class="page active">
+    <header class="nav nav-dark">
+      <div class="nav-inner">
+        <a href="#" class="logo" onclick="showPage('landing')">
+          <span class="logo-icon">🏠</span>
+          <span class="logo-text">HostelHub</span>
+        </a>
+        <nav class="nav-links" id="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#" onclick="showPage('contact')">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn btn-outline-light" onclick="showPage('login')">Login</button>
+          <button class="btn btn-primary" onclick="showPage('signup')">Get Started</button>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge-pill">Smart Hostel Management Platform</span>
+          <h1>Your Hostel Life,<br /><span class="gradient-text">Simplified.</span></h1>
+          <p>Report cleanliness issues, explore today's mess menu, review your meals and find important hostel information — all from one simple dashboard.</p>
+          <div class="hero-btns">
+            <button class="btn btn-primary btn-lg" onclick="showPage('signup')">Get Started →</button>
+            <button class="btn btn-outline-light btn-lg" onclick="showPage('login')">Explore HostelHub</button>
+          </div>
+        </div>
+        <div class="hero-preview">
+          <div class="preview-card">
+            <div class="preview-dots"><span></span><span></span><span></span><span class="preview-label">Student Dashboard</span></div>
+            <div class="preview-welcome">
+              <strong>Welcome back, Aarav!</strong>
+              <small>Block A · Room 204</small>
+            </div>
+            <div class="preview-stats">
+              <div><b class="c-amber">2</b><span>Pending</span></div>
+              <div><b class="c-green">1</b><span>Resolved</span></div>
+              <div><b class="c-cyan">4.0</b><span>Avg Rating</span></div>
+              <div><b class="c-red">1</b><span>Alerts</span></div>
+            </div>
+            <div class="preview-row">📋 HH-CMP-1002 · Drinking Water · Urgent</div>
+            <div class="preview-row">🔔 Mess menu updated for today</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Hostel Services</h2>
+        <p class="section-sub">Everything students need for a cleaner, better-informed hostel experience.</p>
+        <div class="cards-grid">
+          <div class="card service-card">
+            <div class="service-icon bg-blue">✨</div>
+            <h3>Cleanliness Management</h3>
+            <p>Report washroom, corridor, room and common-area issues with priority and tracking.</p>
+          </div>
+          <div class="card service-card">
+            <div class="service-icon bg-green">🍽️</div>
+            <h3>Daily Mess Menu</h3>
+            <p>View today's and weekly mess menus with meal timings and last-updated information.</p>
+          </div>
+          <div class="card service-card">
+            <div class="service-icon bg-amber">⭐</div>
+            <h3>Food Reviews</h3>
+            <p>Rate meals, write feedback and help improve mess quality with real ratings.</p>
+          </div>
+          <div class="card service-card">
+            <div class="service-icon bg-purple">🏪</div>
+            <h3>Canteen Information</h3>
+            <p>Browse canteen items, prices and availability — information only, no ordering.</p>
+          </div>
+          <div class="card service-card">
+            <div class="service-icon bg-rose">👤</div>
+            <h3>Rector & Hostel Support</h3>
+            <p>Find rector contact, office hours, hostel rules and important announcements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">How HostelHub Works</h2>
+        <div class="steps">
+          <div class="step"><span>01</span><h3>Sign in</h3><p>Create an account or login with your student details.</p></div>
+          <div class="step"><span>02</span><h3>Select a service</h3><p>Choose cleanliness, mess, canteen or hostel info.</p></div>
+          <div class="step"><span>03</span><h3>Submit or view</h3><p>File a complaint, check menu or read announcements.</p></div>
+          <div class="step"><span>04</span><h3>Track updates</h3><p>Follow complaint status and receive notifications.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why HostelHub?</h2>
+        <p class="section-sub">Hostel information is often scattered. HostelHub organises it into one portal.</p>
+        <div class="compare">
+          <div class="card compare-bad">
+            <h3>Without HostelHub</h3>
+            <ul>
+              <li>✕ Complaints lost in WhatsApp chats</li>
+              <li>✕ Mess menu only on physical boards</li>
+              <li>✕ No tracking of complaint status</li>
+              <li>✕ Canteen prices change without notice</li>
+              <li>✕ Rector contact hard to find</li>
+            </ul>
+          </div>
+          <div class="card compare-good">
+            <h3>With HostelHub</h3>
+            <ul>
+              <li>✓ Trackable digital complaints with IDs</li>
+              <li>✓ Always-updated digital mess menu</li>
+              <li>✓ Status timeline for every request</li>
+              <li>✓ Live canteen availability & prices</li>
+              <li>✓ Rector info & rules in one place</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to simplify your hostel life?</h2>
+        <p>Built as a Product Ideation project for college demonstration.</p>
+        <button class="btn btn-white btn-lg" onclick="showPage('signup')">Get Started Free →</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo"><span class="logo-icon">🏠</span><span class="logo-text">HostelHub</span></div>
+          <p class="footer-tag">Clean Hostel. Better Food. Quick Support.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#" onclick="showPage('landing')">Home</a>
+          <a href="#" onclick="showPage('login')">Login</a>
+          <a href="#" onclick="showPage('signup')">Sign Up</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <p>Cleanliness · Mess Menu · Food Reviews · Canteen · Rector</p>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <p>support@hostelhub.demo<br />Campus Extension (Demo)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 HostelHub · Product Ideation Project · Demo for educational use · Not affiliated with any real college</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========== LOGIN ========== -->
+  <div id="page-login" class="page">
+    <header class="nav nav-light">
+      <div class="nav-inner">
+        <a href="#" class="logo" onclick="showPage('landing')"><span class="logo-icon">🏠</span><span class="logo-text">HostelHub</span></a>
+        <button class="btn btn-ghost" onclick="showPage('landing')">← Back</button>
+      </div>
+    </header>
+    <div class="auth-wrap">
+      <div class="card auth-card">
+        <h1>Welcome back</h1>
+        <p class="muted">Sign in to your HostelHub account</p>
+        <div class="demo-box">
+          <strong>⚠ DEMO MODE</strong>
+          <p>Data saved in browser localStorage. Not production auth.</p>
+          <p>
+            <button type="button" class="link-btn" onclick="fillDemo('student')">Fill Student</button> ·
+            <button type="button" class="link-btn" onclick="fillDemo('admin')">Fill Admin</button>
+          </p>
+          <p class="tiny">Password: <code>demo1234</code></p>
+        </div>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <label>Email<input type="email" id="login-email" required placeholder="student@demo.hostelhub" /></label>
+          <label>Password<input type="password" id="login-password" required placeholder="••••••••" /></label>
+          <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        </form>
+        <p class="auth-footer">No account? <a href="#" onclick="showPage('signup')">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SIGNUP ========== -->
+  <div id="page-signup" class="page">
+    <header class="nav nav-light">
+      <div class="nav-inner">
+        <a href="#" class="logo" onclick="showPage('landing')"><span class="logo-icon">🏠</span><span class="logo-text">HostelHub</span></a>
+        <button class="btn btn-ghost" onclick="showPage('landing')">← Back</button>
+      </div>
+    </header>
+    <div class="auth-wrap">
+      <div class="card auth-card">
+        <h1>Create Account</h1>
+        <p class="muted">Join HostelHub as a student</p>
+        <form id="signup-form" onsubmit="handleSignup(event)">
+          <label>Full Name<input type="text" id="su-name" required placeholder="Aarav Patel" /></label>
+          <label>Email<input type="email" id="su-email" required placeholder="you@college.edu" /></label>
+          <div class="row-2">
+            <label>Password<input type="password" id="su-pass" required minlength="6" /></label>
+            <label>Confirm<input type="password" id="su-confirm" required /></label>
+          </div>
+          <div class="row-2">
+            <label>Hostel Block
+              <select id="su-block" required>
+                <option value="">Select</option>
+                <option>Block A</option><option>Block B</option><option>Block C</option><option>Block D</option>
+              </select>
+            </label>
+            <label>Room Number<input type="text" id="su-room" required placeholder="204" /></label>
+          </div>
+          <label>Enrollment Number<input type="text" id="su-enroll" required placeholder="CE2024-1042" /></label>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+        <p class="auth-footer">Have an account? <a href="#" onclick="showPage('login')">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONTACT ========== -->
+  <div id="page-contact" class="page">
+    <header class="nav nav-light">
+      <div class="nav-inner">
+        <a href="#" class="logo" onclick="showPage('landing')"><span class="logo-icon">🏠</span><span class="logo-text">HostelHub</span></a>
+        <button class="btn btn-ghost" onclick="showPage('landing')">← Back</button>
+      </div>
+    </header>
+    <div class="section">
+      <div class="container narrow">
+        <h1>Contact Support</h1>
+        <p class="muted">Placeholder details for this college project demo.</p>
+        <div class="cards-grid-2">
+          <div class="card"><strong>📧 Email</strong><p>support@hostelhub.demo</p></div>
+          <div class="card"><strong>📞 Phone</strong><p>Campus Extension (Demo)</p></div>
+          <div class="card"><strong>📍 Office</strong><p>Hostel Administrative Block</p></div>
+          <div class="card"><strong>🕐 Hours</strong><p>Mon–Fri 10:00 AM – 5:00 PM</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== STUDENT DASHBOARD ========== -->
+  <div id="page-dashboard" class="page dashboard-page">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="logo-icon">🏠</span> HostelHub
+        <span class="demo-badge">DEMO</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="side-link active" data-view="overview" onclick="showDashView('overview', this)">📊 Overview</a>
+        <a href="#" class="side-link" data-view="cleanliness" onclick="showDashView('cleanliness', this)">✨ Cleanliness</a>
+        <a href="#" class="side-link" data-view="complaints" onclick="showDashView('complaints', this)">📋 My Complaints</a>
+        <a href="#" class="side-link" data-view="mess" onclick="showDashView('mess', this)">🍽️ Mess Menu</a>
+        <a href="#" class="side-link" data-view="reviews" onclick="showDashView('reviews', this)">⭐ Food Reviews</a>
+        <a href="#" class="side-link" data-view="canteen" onclick="showDashView('canteen', this)">🏪 Canteen</a>
+        <a href="#" class="side-link" data-view="rector" onclick="showDashView('rector', this)">👤 Rector & Info</a>
+        <a href="#" class="side-link" data-view="notifications" onclick="showDashView('notifications', this)">🔔 Notifications</a>
+        <a href="#" class="side-link" data-view="profile" onclick="showDashView('profile', this)">👤 My Profile</a>
+      </nav>
+      <div class="sidebar-user">
+        <div id="dash-user-name">Student</div>
+        <div id="dash-user-email" class="tiny muted"></div>
+        <button class="btn btn-danger btn-sm btn-block" onclick="handleLogout()">Logout</button>
+      </div>
+    </aside>
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="btn btn-ghost sidebar-open" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <span id="dash-title">Overview</span>
+      </header>
+      <div class="dash-content">
+        <!-- Overview -->
+        <div id="view-overview" class="dash-view active">
+          <h1 id="welcome-msg">Welcome back!</h1>
+          <p class="muted" id="welcome-sub"></p>
+          <div class="stats-row" id="stats-row"></div>
+          <div class="row-2-dash">
+            <div class="card">
+              <h3>Today's Mess Menu</h3>
+              <div id="today-menu"></div>
+            </div>
+            <div class="card">
+              <h3>Announcements</h3>
+              <div id="announcements-list"></div>
+              <button class="btn btn-primary btn-sm" style="margin-top:12px" onclick="showDashView('cleanliness')">+ Quick Complaint</button>
+            </div>
+          </div>
+          <div class="card" style="margin-top:16px">
+            <h3>Recent Complaints</h3>
+            <div id="recent-complaints" class="table-wrap"></div>
+          </div>
+        </div>
+
+        <!-- Cleanliness form -->
+        <div id="view-cleanliness" class="dash-view">
+          <h1>Report Cleanliness Issue</h1>
+          <div class="card" style="max-width:560px">
+            <form id="complaint-form" onsubmit="submitComplaint(event)">
+              <label>Category
+                <select id="c-cat" required>
+                  <option>Washroom</option><option>Room</option><option>Corridor</option>
+                  <option>Drinking Water</option><option>Waste Management</option>
+                  <option>Common Area</option><option>Other</option>
+                </select>
+              </label>
+              <div class="row-2">
+                <label>Hostel Block
+                  <select id="c-block" required>
+                    <option>Block A</option><option>Block B</option><option>Block C</option><option>Block D</option>
+                  </select>
+                </label>
+                <label>Room / Area<input type="text" id="c-room" required placeholder="204 or 2nd Floor" /></label>
+              </div>
+              <label>Location<input type="text" id="c-loc" required placeholder="e.g. Common washroom near room 204" /></label>
+              <label>Description<textarea id="c-desc" required minlength="10" rows="3" placeholder="Describe the issue clearly..."></textarea></label>
+              <label>Priority
+                <select id="c-pri">
+                  <option>Normal</option><option>High</option><option>Urgent</option>
+                </select>
+              </label>
+              <p class="tiny muted" id="urgent-note" style="display:none;color:#b91c1c">
+                Urgent: This website does not replace official emergency procedures. Contact campus security for real emergencies.
+              </p>
+              <button type="submit" class="btn btn-primary">Submit Complaint</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- My Complaints -->
+        <div id="view-complaints" class="dash-view">
+          <h1>My Complaints</h1>
+          <div class="filters">
+            <input type="search" id="c-search" placeholder="Search by ID, category..." oninput="renderComplaints()" />
+            <select id="c-filter-status" onchange="renderComplaints()">
+              <option value="">All Statuses</option>
+              <option>Received</option><option>Assigned</option><option>In Progress</option><option>Resolved</option><option>Cancelled</option>
+            </select>
+          </div>
+          <div class="card table-wrap" id="complaints-table"></div>
+        </div>
+
+        <!-- Complaint detail -->
+        <div id="view-complaint-detail" class="dash-view">
+          <button class="btn btn-ghost btn-sm" onclick="showDashView('complaints')">← Back</button>
+          <div id="complaint-detail-body"></div>
+        </div>
+
+        <!-- Mess -->
+        <div id="view-mess" class="dash-view">
+          <h1>Mess Menu</h1>
+          <p class="muted">Sample / demo menus. Updated by administration.</p>
+          <div id="mess-list" class="cards-grid"></div>
+        </div>
+
+        <!-- Reviews -->
+        <div id="view-reviews" class="dash-view">
+          <h1>Food Reviews</h1>
+          <div class="card" style="max-width:480px;margin-bottom:16px">
+            <h3>Submit a Review</h3>
+            <form onsubmit="submitReview(event)">
+              <label>Meal
+                <select id="r-meal" required>
+                  <option value="">Choose...</option>
+                  <option value="Breakfast">Breakfast (Today)</option>
+                  <option value="Lunch">Lunch (Today)</option>
+                  <option value="Dinner">Dinner (Today)</option>
+                </select>
+              </label>
+              <label>Rating (1–5)
+                <select id="r-rating" required>
+                  <option value="5">5 ★</option><option value="4">4 ★</option><option value="3">3 ★</option>
+                  <option value="2">2 ★</option><option value="1">1 ★</option>
+                </select>
+              </label>
+              <label>Review (optional)<textarea id="r-text" rows="2"></textarea></label>
+              <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+          </div>
+          <div class="card">
+            <h3>My Reviews</h3>
+            <div id="my-reviews"></div>
+          </div>
+        </div>
+
+        <!-- Canteen -->
+        <div id="view-canteen" class="dash-view">
+          <h1>Canteen Information</h1>
+          <p class="muted">Demo prices · Opening: 8:00 AM – 9:00 PM · No online ordering</p>
+          <input type="search" id="can-search" placeholder="Search items..." oninput="renderCanteen()" style="margin-bottom:12px;max-width:320px" />
+          <div id="canteen-list" class="cards-grid"></div>
+        </div>
+
+        <!-- Rector -->
+        <div id="view-rector" class="dash-view">
+          <h1>Rector & Hostel Information</h1>
+          <div class="card">
+            <span class="badge badge-warn">Placeholder — Not Verified</span>
+            <h3 style="margin-top:12px">[Placeholder] Dr. Ramesh Kumar</h3>
+            <p>📧 rector.hostel@college.edu.in</p>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>🕐 Mon–Fri 10:00 AM – 5:00 PM</p>
+            <p>📍 Hostel Administrative Block, Ground Floor</p>
+          </div>
+          <div class="card" style="margin-top:16px">
+            <h3>Hostel Rules</h3>
+            <ol>
+              <li>Return by 10:00 PM weekdays, 11:00 PM weekends.</li>
+              <li>Visitors only in common areas during designated hours.</li>
+              <li>Keep rooms and common areas clean.</li>
+              <li>No cooking in rooms.</li>
+              <li>Ragging is strictly prohibited.</li>
+              <li>Maintain silence after 11:00 PM.</li>
+            </ol>
+          </div>
+          <div class="card card-warn" style="margin-top:16px">
+            <strong>⚠ Emergency Guidance</strong>
+            <p>This website does NOT replace official emergency procedures. For medical or security emergencies contact campus security immediately.</p>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="view-notifications" class="dash-view">
+          <h1>Notifications</h1>
+          <button class="btn btn-outline btn-sm" onclick="markAllRead()">Mark all read</button>
+          <div id="notif-list" class="card" style="margin-top:12px"></div>
+        </div>
+
+        <!-- Profile -->
+        <div id="view-profile" class="dash-view">
+          <h1>My Profile</h1>
+          <div class="card" id="profile-card" style="max-width:400px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ADMIN DASHBOARD ========== -->
+  <div id="page-admin" class="page dashboard-page">
+    <aside class="sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <span class="logo-icon">🏠</span> HostelHub
+        <span class="demo-badge">ADMIN</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="side-link active" onclick="showAdminView('a-overview', this)">📊 Overview</a>
+        <a href="#" class="side-link" onclick="showAdminView('a-complaints', this)">📋 Complaints</a>
+        <a href="#" class="side-link" onclick="showAdminView('a-mess', this)">🍽️ Mess Menu</a>
+        <a href="#" class="side-link" onclick="showAdminView('a-canteen', this)">🏪 Canteen</a>
+        <a href="#" class="side-link" onclick="showAdminView('a-users', this)">👥 Users</a>
+      </nav>
+      <div class="sidebar-user">
+        <div id="admin-user-name">Admin</div>
+        <button class="btn btn-danger btn-sm btn-block" onclick="handleLogout()">Logout</button>
+      </div>
+    </aside>
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="btn btn-ghost sidebar-open" onclick="document.getElementById('admin-sidebar').classList.toggle('open')">☰</button>
+        <span>Admin Dashboard</span>
+      </header>
+      <div class="dash-content">
+        <div id="view-a-overview" class="dash-view active">
+          <h1>Admin Overview</h1>
+          <div class="stats-row" id="admin-stats"></div>
+          <div class="card" style="margin-top:16px">
+            <h3>All Complaints</h3>
+            <div id="admin-complaints-table" class="table-wrap"></div>
+          </div>
+        </div>
+        <div id="view-a-complaints" class="dash-view">
+          <h1>Manage Complaints</h1>
+          <div id="admin-manage" class="table-wrap card"></div>
+          <div id="admin-edit-panel" class="card" style="margin-top:16px;display:none;max-width:480px">
+            <h3 id="edit-title">Update Complaint</h3>
+            <label>Status
+              <select id="edit-status">
+                <option>Received</option><option>Assigned</option><option>In Progress</option><option>Resolved</option><option>Cancelled</option>
+              </select>
+            </label>
+            <label>Assign To<input type="text" id="edit-assign" placeholder="Staff name" /></label>
+            <label>Resolution Notes<textarea id="edit-notes" rows="2"></textarea></label>
+            <button class="btn btn-primary" onclick="saveComplaintStatus()">Update Status</button>
+            <button class="btn btn-ghost" onclick="document.getElementById('admin-edit-panel').style.display='none'">Cancel</button>
+          </div>
+        </div>
+        <div id="view-a-mess" class="dash-view">
+          <h1>Manage Mess Menu</h1>
+          <p class="muted">Demo menus are stored in localStorage. Students see published menus.</p>
+          <div id="admin-mess-list" class="cards-grid"></div>
+        </div>
+        <div id="view-a-canteen" class="dash-view">
+          <h1>Manage Canteen</h1>
+          <div id="admin-canteen-list" class="table-wrap card"></div>
+        </div>
+        <div id="view-a-users" class="dash-view">
+          <h1>Users</h1>
+          <div id="admin-users" class="table-wrap card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
